@@ -1,0 +1,9 @@
+<ion-view view-title="Emisora">
+    <ion-content class="cover-radio text-center">
+        <div class="program-radio text-center white-color width-100">
+        <div ng-click="playRadio()" class="" ng-class="{'radio-on': radio, 'radio-off': !radio}">
+            <i class="ion-icon teal-color" ng-if="!load" ng-class="{'ion-pause': radio, 'ion-play': !radio}" style="font-size: 75px;"></i>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,37 @@
+<ion-side-menu side="left">
+    <ion-content class="">
+        <div class="teal-background text-center">
+            <img class="cover-menu" src="img/institutional.jpg">
+        </div>
+        <ion-list class="style-menu">
+            <ion-item menu-close ng-click="switchNews('news')" href="#/news">
+                <i class="ion-icon ion-pin float-left"></i>
+                <span>Noticias</span>
+            </ion-item>
+            <ion-item menu-close href="#/radio">
+                <i class="ion-icon ion-ios-mic float-left"></i> <span>Emisora</span>
+            </ion-item>
+            <ion-item menu-close href="#/events" ng-if="false">
+                <i class="ion-icon ion-android-calendar float-left"></i> <span>Eventos</span>
+            </ion-item>
+            <ion-item menu-close ng-click="switchNews('education')" href="#/news">
+                <i class="ion-icon ion-easel float-left"></i> <span>Educación continuada</span>
+            </ion-item>
+            <ion-item menu-close ng-click="switchNews('wellness')" href="#/news">
+                <i class="ion-icon ion-android-contacts float-left"></i> <span>Bienestar universitario</span>
+            </ion-item>
+            <ion-item menu-close ng-click="switchNews('agreement')" href="#/news">
+                <i class="ion-icon ion-speakerphone float-left"></i> <span>Convenios</span>
+            </ion-item>
+            <ion-item menu-close ng-click="switchNews('graduate')" href="#/news">
+                <i class="ion-icon ion-android-people float-left"></i> <span>Graduados</span>
+            </ion-item>
+            <ion-item menu-close ng-click="switchNews('youth')" href="#/news">
+                <i class="ion-icon ion-ios-people float-left"></i> <span>Extensión social</span>
+            </ion-item>
+            <ion-item menu-close href="#/institutional">
+                <i class="ion-icon ion-university float-left"></i> <span>Mi universidad</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-side-menu>

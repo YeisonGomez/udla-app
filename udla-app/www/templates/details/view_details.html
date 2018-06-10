@@ -1,0 +1,17 @@
+<ion-view view-cached="false" view-title="Detalle" >
+    <ion-content>
+        <div class="item item-image text-news ">
+            <img ng-if="newDetail.view_img != undefined" ng-src="{{api_urll}}{{newDetail.view_img}}">
+            <img ng-if="newDetail.view_img == undefined" ng-src="img/admin.jpg">
+            <h2>{{newDetail.subject}}</h2>
+        </div>
+        <!--<h2 class="new-detail">{{newDetail.subject}}</h2>-->
+        <div class="card" ng-init="initQuill()">
+            <div class="item item-text-wrap fix-img">
+                <strong>{{newDetail.detail}}</strong>
+            </div>
+            <div id="editor-container"></div>
+        </div>
+        <p class="float-right teal-color font-small margin-date">{{newDetail.date_edit | date:"MM/dd/yyyy hh:mm a"}}</p>
+    </ion-content>
+</ion-view>

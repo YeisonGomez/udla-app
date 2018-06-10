@@ -1,0 +1,19 @@
+<ion-side-menus>
+    <div class="toast white-color text-center" ng-if="notifyText.length != 0 && notifyText != undefined"> {{notifyText}} </div>
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable teal-background ">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+                <img src="img/LogoUAwhite.svg" alt="" style="width: 38px; position: absolute; top: 8px; right:8px; z-index:11">
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon white-color" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="content">
+        </ion-nav-view>
+    </ion-side-menu-content>
+    <!--=================================MENU IZQUIERDO===============================-->
+    <div ng-include src="'templates/main/view_menu_left.html'">
+    </div>
+</ion-side-menus>

@@ -1,0 +1,29 @@
+    <ion-view view-cached="false"  view-title="{{module_now.detail}}" >
+    <ion-content>
+        <ion-refresher spinner="dots" pulling-icon="ion-chevron-down" on-refresh="doRefresh(init, 1000)"></ion-refresher>
+        <div class="black-all" ng-if="loadingState">
+            <ion-spinner icon="circles" class="loader text-center"></ion-spinner>
+        </div>
+        <div ng-if="news.length == 0 && !loadingState" class="ion-icon ion-sad-outline text-center font-60 margin-top30">
+            <h2>No se ha podido conectar con el servidor</h2>
+        </div>
+        <section ng-if="news.length != 0" ng-repeat="new in news | orderBy: '-date_edit'">
+            <a ng-click="details(new)">
+                <div class="item item-image text-news" ng-if="$index == 0">
+                    <img ng-src="{{api_urll}}{{new.view_img}}">  
+                    <h2>{{new.subject}}</h2>
+                </div>
+            </a>
+            <div class="list card" ng-if="$index != 0">
+                <a ng-click="details(new)">
+                    <div class="item item-avatar select">
+                        <img ng-src="{{api_urll}}{{new.view_img}}">
+                        <h2>{{new.subject}}</h2>
+                        <p>{{new.detail}}</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <br>
+    </ion-content>
+</ion-view>
